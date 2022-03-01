@@ -1,0 +1,5 @@
+Flask==2.0.3
+numpy==1.22.2
+opencv_python==4.5.3.56
+tensorflow==2.5.0
+~umpy==1.20.1

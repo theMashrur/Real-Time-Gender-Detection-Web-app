@@ -1,6 +1,5 @@
 from flask import Flask, render_template, Response
 from video import Camera
-import tensorflow as tf
 
 
 app = Flask(__name__, static_url_path="/static")
