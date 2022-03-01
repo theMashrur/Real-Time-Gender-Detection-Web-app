@@ -2,9 +2,9 @@
 
  A web interface for my real time gender detection project
 
-## Getting Started
+## Introduction
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This is a Web app using the model that I trained in my gender detection project. It uses flask and bootstrap for the web side of things, while OpenCV and tensorflow allow the real-time usage of the model previously mentioned. The model was developed on a CUDA enabled GPU, so to run this project, I would recommend you have the same: however it shouldn't be necessary.
 
 ### Prerequisites
 
@@ -34,6 +34,7 @@ should also work
 * [CUDA](https://developer.nvidia.com/cuda-toolkit) - parallel computing platform and programming model developed by Nvidia for computing on GPUs
 * [cuDNN](https://developer.nvidia.com/cudnn) - GPU accelerated library for Deep Neural Networks based on CUDA
 * [OpenCV](https://opencv.org/) - a real-time optimized Computer Vision library
+* [Boostrap](https://getbootstrap.com/) - a free and open-source CSS framework directed at responsive, mobile-first front-end web development
 ## Authors
 
 * **Mashrur Khondokar**
