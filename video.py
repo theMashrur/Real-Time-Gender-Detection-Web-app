@@ -9,6 +9,8 @@ red = (0, 0, 255)
 
 face_detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 classes_dict = {0 : "man", 1 : "woman"}
+gpu = tf.config.experimental.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(gpu[0], True)
 classifier = keras.models.load_model('./gender_classifier.h5')
 
 def resize_image(image, x, y, w, h):
