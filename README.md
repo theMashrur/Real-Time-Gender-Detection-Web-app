@@ -26,7 +26,7 @@ export FLASK_APP=app.py && flask run
 ```
 should also work
 
-## Built With (to be added)
+## Built With
 
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/) - Micro web framework for python
 * [Tensorflow](https://www.tensorflow.org) - low level deep learning API made by google
