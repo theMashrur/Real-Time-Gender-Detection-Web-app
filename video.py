@@ -9,8 +9,8 @@ red = (0, 0, 255)
 
 face_detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 classes_dict = {0 : "man", 1 : "woman"}
-gpu = tf.config.experimental.list_physical_devices('GPU')
-tf.config.experimental.set_memory_growth(gpu[0], True)
+gpu = tf.config.experimental.list_physical_devices('GPU') #delete these 2 lines
+tf.config.experimental.set_memory_growth(gpu[0], True) #if running on CPU
 classifier = keras.models.load_model('./gender_classifier.h5')
 
 def resize_image(image, x, y, w, h):
@@ -64,7 +64,7 @@ class Camera:
                 colour = blue
             else:
                 colour = red
-            
+
             cv2.rectangle(frame, (x, y), (x+w, y+h), colour, 2)
             cv2.putText(frame, "{0}: {1}%".format(prediction, confidence), (x, y), cv2.FONT_HERSHEY_PLAIN, 2, colour, 2)
         ret, jpeg = cv2.imencode('.jpg', frame)
